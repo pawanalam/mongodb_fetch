@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../before_project (1)"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "mongodb"
+	}
+}

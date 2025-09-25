@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../static/Signup.css">
+</head>
+
+<body>
+    <form action="/update/<%=user._id %>" method="POST" class="contact-items">
+
+        <div class="arch_contact_us_duplicate">
+            <div class="responsive-container-block big-container">
+                <div class="responsive-container-block container">
+                    <div class="responsive-cell-block wk-mobile-12 wk-desk-5 wk-tab-10 wk-ipadp-5" id="ih6s">
+                        <p class="text-blk section-head"> Edit user (<%=user.name%>)</p>
+                    </div>
+                    <div class="responsive-cell-block wk-ipadp-6 wk-mobile-12 wk-desk-5 wk-tab-9" id="i6df">
+                        <div class="form-wrapper">
+                            <input value="<%=user.name%>" required class="input input-element" type="text" name="name"
+                                placeholder="Name">
+                            <input value="<%=user.phone%>" required class="input input-element" type="text" name="phone"
+                                placeholder="Contact Number">
+                            <input value="<%=user.email%>" required class="input input-element" type="text" name="email"
+                                placeholder="Email">
+                            <input value="<%=user.password%>" id="passowrd" required class="input input-element" type="text" name="password"
+                                placeholder="passowrd">
+                            <input value="<%=user.cpassword%>" id="cpassowrd" required class="input input-element"
+                                type="text" name="cpassword" placeholder="conform password">
+                            <p id="error"> </p>
+                            <button id="button" class="button">Update</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </form>
+
+</body>
+<script>
+
+    let btn = document.getElementById("button");
+    console.log(btn);
+
+    btn.addEventListener("click", (e) => {
+        let passowrd = document.getElementById("passowrd").value;
+        let cpassowrd = document.getElementById("cpassowrd").value;
+        if (passowrd !== cpassowrd) {
+
+            let error = document.getElementById("error");
+            error.innerHTML = "<p>  Wrong passowrd </p> "
+
+        }
+
+    })
+
+
+
+</script>
+
+</html>
