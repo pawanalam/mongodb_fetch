@@ -48,11 +48,14 @@
         margin-left: auto;
         justify-content: flex-start;
     }
-
+    
     .arch_contact_us_duplicate .responsive-cell-block {
         min-height: 75px;
     }
-
+     .wk-ipadp-5{
+        display: flex;
+        border: 2px solid red;
+   }
     .arch_contact_us_duplicate .responsive-container-block.big-container {
         justify-content: center;
         align-items: center;
@@ -63,7 +66,6 @@
         padding-left: 50px;
         background-color: #fdfcea;
     }
-
     .arch_contact_us_duplicate .responsive-container-block.container {
         max-width: 1100px;
         justify-content: space-evenly;
@@ -208,12 +210,12 @@
             font-size: 55px;
             line-height: 60px;
         }
-
+        
         .arch_contact_us_duplicate .responsive-container-block.container {
             justify-content: space-between;
         }
     }
-
+    
     @media (max-width: 768px) {
         .arch_contact_us_duplicate .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-ipadp-6.wk-desk-5 {
             margin-top: 0px;

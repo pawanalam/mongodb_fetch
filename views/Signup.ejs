@@ -10,36 +10,39 @@
 </head>
 
 <body>
-    <form action="/" method="POST" class="contact-items">
-
+    <div class="contact-items">
+        
+        
         <div class="arch_contact_us_duplicate">
             <div class="responsive-container-block big-container">
                 <div class="responsive-container-block container">
                     <div class="responsive-cell-block wk-mobile-12 wk-desk-5 wk-tab-10 wk-ipadp-5" id="ih6s">
                         <p class="text-blk section-head"> SignUp</p>
-
+                        <a href="/Login"><button>Alredy have account</button></a>
                     </div>
                     <div class="responsive-cell-block wk-ipadp-6 wk-mobile-12 wk-desk-5 wk-tab-9" id="i6df">
                         <div class="form-wrapper">
-                            <input required class="input input-element" type="text" name="name" placeholder="Name">
-                            <input required class="input input-element" type="text" name="phone"
-                                placeholder="Contact Number">
-                            <input required class="input input-element" type="text" name="email" placeholder="Email">
-                            <input id="passowrd" required class="input input-element" type="text" name="password"
-                                placeholder="passowrd">
-                            <input id="cpassowrd" required class="input input-element" type="text" name="cpassword"
-                                placeholder="conform password">
-                            <p id="error"> </p>
-                            <button id="button" class="button">Send</button>
+                            <form action="/" method="POST">
+
+                                <input required class="input input-element" type="text" name="name" placeholder="Name">
+                                <input required class="input input-element" type="text" name="phone"
+                                    placeholder="Contact Number">
+                                <input required class="input input-element" type="text" name="email"
+                                    placeholder="Email">
+                                <input id="passowrd" required class="input input-element" type="text" name="password"
+                                    placeholder="passowrd">
+                                <input id="cpassowrd" required class="input input-element" type="text" name="cpassword"
+                                    placeholder="conform password">
+                                <p id="error"> </p>
+                                <button id="button" class="button">Send</button>
+                            </form>
                         </div>
 
                     </div>
                 </div>
             </div>
         </div>
-        </div>
-    </form>
-          <a href="/Login"><button class="button">Alredy have account</button></a>
+    </div>
 
 </body>
 <script>
