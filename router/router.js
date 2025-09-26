@@ -34,9 +34,8 @@ router.post("/", async (req, res) => {
 
             });
 
-
             let register = await login.save();
-            res.render("Login")
+             res.redirect("/Login")
 
         }
 
@@ -52,7 +51,6 @@ router.post("/", async (req, res) => {
 router.post("/login", async (req, res) => {
 
     try {
-
         let loginemail = req.body.logemail;
         let loginpassword = req.body.logpassword;
 
@@ -67,7 +65,7 @@ router.post("/login", async (req, res) => {
         }
 
     } catch (error) {
-        res.status(400).send("invalid email");
+        res.status(400).send("invalid email" + error);
     }
 
 })
@@ -82,11 +80,9 @@ router.get("/Fetch", async (req, res) => {
     })
 });
 
-
-
-router.get("/Update/:id", async(req, res) => {
-    let {id} = req.params;
-   await mongooseMdl.findById(id).then((value) => {
+router.get("/Update/:id", async (req, res) => {
+    let { id } = req.params;
+    await mongooseMdl.findById(id).then((value) => {
         if (value == null) {
             res.redirect("/")
         } else {
@@ -111,14 +107,14 @@ router.post("/update/:id", async (req, res) => {
             name: req.body.name,
             phone: req.body.phone,
             email: req.body.email,
-            password : req.body.newpassword,
-            password : req.body.newcpassword
+            password: req.body.newpassword,
+            password: req.body.newcpassword
 
 
         }).then((value) => { }).catch((err) => { })
         res.redirect("/Fetch")
-        
-    }else{
+
+    } else {
         res.send("not match password")
     }
 

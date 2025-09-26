@@ -11,13 +11,15 @@
 
 <body>
     <div class="contact-items">
-        
-        
+
+
         <div class="arch_contact_us_duplicate">
             <div class="responsive-container-block big-container">
                 <div class="responsive-container-block container">
                     <div class="responsive-cell-block wk-mobile-12 wk-desk-5 wk-tab-10 wk-ipadp-5" id="ih6s">
                         <p class="text-blk section-head"> SignUp</p>
+                    </div>
+                    <div class="already-user">
                         <a href="/Login"><button>Alredy have account</button></a>
                     </div>
                     <div class="responsive-cell-block wk-ipadp-6 wk-mobile-12 wk-desk-5 wk-tab-9" id="i6df">
@@ -50,9 +52,8 @@
 
 
     let btn = document.getElementById("button");
-    console.log(btn);
-
-    btn.addEventListener("click", (e) => {
+    
+    btn.addEventListener("click", async(e) => {
         let passowrd = document.getElementById("passowrd").value;
         let cpassowrd = document.getElementById("cpassowrd").value;
         if (passowrd !== cpassowrd) {
